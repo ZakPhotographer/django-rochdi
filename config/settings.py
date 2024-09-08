@@ -23,7 +23,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Allowed hosts
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['rochdi.pythonanywhere.com',]
 
 # Custom user model
 AUTH_USER_MODEL = "accounts.User"
@@ -104,11 +104,11 @@ ASGI_APPLICATION = "config.asgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'zeb',  # Name of your XAMPP MySQL database
-        'USER': 'root',     # Default MySQL user for XAMPP
-        'PASSWORD': '',     # Leave empty for the default XAMPP MySQL setup
-        'HOST': '127.0.0.1',  # Or 'localhost'
-        'PORT': '3306',      # Default MySQL port
+        'NAME': 'rochdi$zeb',  # Update this to the exact name
+        'USER': 'rochdi',
+        'PASSWORD': 'your_mysql_password',
+        'HOST': 'rochdi.mysql.pythonanywhere-services.com',
+        'PORT': '3306',
     }
 }
 
